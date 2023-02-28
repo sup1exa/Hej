@@ -1,7 +1,8 @@
 package com.company;
 
 public class Main {
+
     public static void main(String[] args) {
-        //1234241
+       point point1 = new point(12.5,23.3);
     }
 }
