@@ -9,6 +9,7 @@ public class  Main {
         a.SetFirst(point1);
         a.SetSecond(point2);
         a.Distance(a.GetFirst(),a.GetSecond());
-        System.out.print(a.Distance(a.GetFirst(),a.GetSecond()));
+        System.out.println(a.Distance(a.GetFirst(),a.GetSecond()));
+        System.out.print(a.toSvg());
     }
 }

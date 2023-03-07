@@ -1,6 +1,7 @@
 package com.company;
 
 public class Segment {
+    private Point point1,point2;
     private Point first = new Point(23.5,12.3) ;
     private Point second = new Point(34.1,22.6) ;
     Segment(){}
@@ -19,13 +20,34 @@ public class Segment {
     double Distance(Point first,Point second){
         return Math.sqrt(Math.pow(second.x-first.x,2) + Math.pow(second.y-first.y,2));
     }
-    //String napis(Point first,Point second){
-        // return String str1= String.format("%s",'<svg height="210" width="500">
-  //<line x1="0" y1="0" x2="20" y2="20" style="stroke:rgb(255,0,0);stroke-width:2" />
-      //          Sorry, your browser does not support inline SVG.
-//</svg>)'
-  //  }
-    double haha(Segment a,Point point1){
-        return a.Distance(a.GetFirst(),a.GetSecond());
+    public String toSvg(){
+        String ans;
+        ans = "<line x1 = ";
+        ans += '"';
+        ans += Math.min(first.x,second.x);
+        ans += '"';
+        ans += " x2 = ";
+        ans += '"';
+        ans += Math.max(first.x,second.x);
+        ans += '"';
+        ans += " y1 = ";
+        ans += '"';
+        ans += Math.min(first.x,second.x);
+        ans += '"';
+        ans += " y2 = ";
+        ans += '"';
+        ans += Math.max(first.x,second.x);
+        ans += '"';
+        ans += " stroke = ";
+        ans += '"';
+        ans += "red";
+        ans += '"';
+        ans += " stroke-width = ";
+        ans += '"';
+        ans += 5;
+        ans += '"';
+        ans+="/>";
+        return ans;
     }
+
 }
