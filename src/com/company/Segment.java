@@ -26,7 +26,6 @@ public class Segment {
 //</svg>)'
   //  }
     double haha(Segment a,Point point1){
-        a.Distance(a.GetFirst(),a.GetSecond());
-        Point point2= new Point()
+        return a.Distance(a.GetFirst(),a.GetSecond());
     }
 }
